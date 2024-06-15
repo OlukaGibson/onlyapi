@@ -245,6 +245,16 @@ app.delete('/deleterecord/:id', async (req, res) => {
     }
 });
 
+app.get('/device/', async(req,res) =>{
+    try {
+        const name2 = "Gibson to hello world";
+        console.log(name2)
+        res.send(name2);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+});
+
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
